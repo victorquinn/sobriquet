@@ -1,0 +1,17 @@
+<div class="vital-card education">
+    <div class="vital-card-top">
+        <a href="{{ .Params.school_website }}" target="_blank">
+            {{ if isset .Params "school_img" }}
+            <img src="img/{{ .Params.school_img }}" class="pure-img" alt="{{ .Params.school_name }}" />
+            {{ else }}
+            <h2>{{ .Params.school_name }}</h2>
+            {{ end }}
+        </a>
+    </div>
+    <div class="vital-card-body">
+        <h4 class="degree">{{ .Params.degree }}</h4>
+        <h4 class="time">{{ .Params.time }}</h4>
+        <p>{{ .Params.summary }}</p>
+        <!-- <p><a href="{{ .Permalink }}">more...</a></p>  -->
+    </div>
+</div>

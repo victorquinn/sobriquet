@@ -1,0 +1,18 @@
+<div class="vital-card project">
+    <div class="vital-card-top">
+        <a href="{{ .Params.project_website }}" target="_blank">
+            {{ if isset .Params "project_img" }}
+            <img src="img/{{ .Params.project_img }}" class="pure-img" alt="{{ .Params.project_name }}" />
+            {{ else }}
+            <h2>{{ .Params.project_name }}</h2>
+            {{ end }}
+        </a>
+    </div>
+    <div class="vital-card-body">
+        <p>{{ .Params.summary }}</p>
+        {{ if and (isset .Params "user") (isset .Params "repo") }}
+        <iframe src="http://ghbtns.com/github-btn.html?user={{ .Params.user }}&repo={{ .Params.repo }}&type=star&count=true"  allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        {{ end }}
+        <!-- <p><a href="{{ .Permalink }}">more...</a></p>  -->
+    </div>
+</div>
