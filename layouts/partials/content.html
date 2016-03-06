@@ -10,11 +10,14 @@
         {{ end }}
     </div>
     <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
+        {{ if (len (where .Data.Pages "Section" "education")) gt 0 }}
         <div class="vital-card-header">
-            <h3>Writing</h3>
+            <h3>Education</h3>
         </div>
-        <div class="vital-card writing">
-        </div>
+        {{ end }}
+        {{ range where .Data.Pages "Section" "education" }}
+        {{ .Render "card" }}
+        {{ end }}
     </div>
     <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
     </div>
