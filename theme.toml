@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Sobriquet"
+license = "MIT"
+licenselink = "https://github.com/victorquinn/sobriquet/blob/master/LICENSE.md"
+description = ""
+homepage = "http://victorquinn.com/sobriquet"
+tags = ["personal", "blog", "portfolio"]
+features = ["", ""]
+min_version = 0.14
+
+[author]
+  name = "Victor Quinn <mail@victorquinn.com>"
+  homepage = "https://victorquinn.com"

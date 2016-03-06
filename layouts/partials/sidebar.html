@@ -1,0 +1,68 @@
+<div class="sidebar pure-u-1 pure-u-sm-1-4">
+    <div class="header">
+        {{ with .Site.Params.profile_img }}
+        <img class="pure-img pure-img-responsive profile-img" src="img/{{ . }}" />
+        {{ end }}
+        {{ with .Site.Params.author }}
+        <h1 class="name">{{ . }}</h1>
+        {{ end }}
+        {{ with .Site.Params.headline }}
+        <h3 class="headline">{{ . }}</h3>
+        {{ end }}
+        {{ with .Site.Params.summary }}
+        <p><em>{{ . }}</em></p>
+        {{ end }}
+        <nav class="nav">
+            <ul class="nav-list">
+                {{ with .Site.Params.facebook }}
+                <li class="nav-item">
+                    <a class="pure-button social-button" href="https://facebook.com/{{ . }}" target="_blank">
+                        <img src="img/Facebook.png" class="pure-img-responsive social-icon" />
+                        <span class="social-text">Facebook</span>
+                    </a>
+                </li>
+                {{ end }}
+                {{ with .Site.Params.github }}
+                <li class="nav-item">
+                    <a class="pure-button social-button" href="https://github.com/{{ . }}" target="_blank">
+                        <img src="img/Github.png" class="pure-img-responsive social-icon" />
+                        <span class="social-text">Github</span>
+                    </a>
+                </li>
+                {{ end }}
+                {{ with .Site.Params.google_plus }}
+                <li class="nav-item">
+                    <a class="pure-button social-button" href="https://google.com/{{ . }}" target="_blank">
+                        <img src="img/Google+.png" class="pure-img-responsive social-icon" />
+                        <span class="social-text">Google+</span>
+                    </a>
+                </li>
+                {{ end }}
+                {{ with .Site.Params.linkedin }}
+                <li class="nav-item">
+                    <a class="pure-button social-button" href="https://linkedin.com/in/{{ . }}" target="_blank">
+                        <img src="img/Linkedin.png" class="pure-img-responsive social-icon" />
+                        <span class="social-text">LinkedIn</span>
+                    </a>
+                </li>
+                {{ end }}
+                {{ with .Site.Params.reddit }}
+                <li class="nav-item">
+                    <a class="pure-button social-button" href="https://reddit.com/u/{{ . }}" target="_blank">
+                        <img src="img/Reddit.png" class="pure-img-responsive social-icon" />
+                        <span class="social-text">Reddit</span>
+                    </a>
+                </li>
+                {{ end }}
+                {{ with .Site.Params.twitter }}
+                <li class="nav-item">
+                    <a class="pure-button social-button" href="https://twitter.com/{{ . }}" target="_blank">
+                        <img src="img/Twitter.png" class="pure-img-responsive social-icon" />
+                        <span class="social-text">Twitter</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</div>
