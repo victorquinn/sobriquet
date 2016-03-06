@@ -1,0 +1,15 @@
+<div class="vital-card writing">
+    <div class="vital-card-top">
+        <a href="{{ .Params.writing_website }}" target="_blank">
+            {{ if isset .Params "writing_img" }}
+            <img src="img/{{ .Params.writing_img }}" class="pure-img" alt="{{ .Params.writing_name }}" />
+            {{ else }}
+            <h2>{{ .Params.writing_name }}</h2>
+            {{ end }}
+        </a>
+    </div>
+    <div class="vital-card-body">
+        <p>{{ .Params.summary }}</p>
+        <!-- <p><a href="{{ .Permalink }}">more...</a></p>  -->
+    </div>
+</div>

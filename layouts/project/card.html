@@ -13,6 +13,9 @@
         {{ if and (isset .Params "user") (isset .Params "repo") }}
         <iframe src="http://ghbtns.com/github-btn.html?user={{ .Params.user }}&repo={{ .Params.repo }}&type=star&count=true"  allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
         {{ end }}
+        {{ with .Params.npm }}
+        <a href="https://nodei.co/npm/{{ . }}/"><img src="https://nodei.co/npm/{{ . }}.png?downloads=true&downloadRank=true" class="pure-img"></a>
+        {{ end }}
         <!-- <p><a href="{{ .Permalink }}">more...</a></p>  -->
     </div>
 </div>
