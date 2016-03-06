@@ -102,6 +102,17 @@ h3 {
     color: #fff;
 }
 
+.vital-card h2 {
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+}
+
+.vital-card-top > a {
+    text-decoration: none;
+    color: #333;
+}
+
 .vital-card-top {
     padding: 1em;
 }

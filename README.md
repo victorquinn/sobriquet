@@ -41,8 +41,15 @@ Since Sobriquet is intended for use as a Personal website theme, there are some
 personal specific configurations that aren't present on most more generic
 blog themes.
 
+#### Name
+
+Some personal items include your name, headline, summary, and more. These are
+displayed by default on the sidebar.
+
 ```toml
-    name = "Victor Quinn"
+    author = "Victor Quinn"
+    headline = "Leader of Engineers."
+    summary = "Specializing in leading software engineers to build scalable backends."
 ```
 
 #### Photo
@@ -59,7 +66,7 @@ Sobriquet expects this image to be placed in the `/static/img/` directory.
 
 Sobriquet currently supports a bunch of the major social networking platforms.
 
-Simply add the username for each network to your confi:
+Simply add the username for each network to your config:
 
 ```toml
     facebook = "victorjquinn"
@@ -69,6 +76,8 @@ Simply add the username for each network to your confi:
     reddit = "victorquinn"
     twitter = "victorquinn"
 ```
+
+If any network is not provided, Sobriquet will automatically hide it.
 
 ### Analytics
 
@@ -88,3 +97,70 @@ To include it, add the following to your `config.toml`
 [params]
     google_analytics = "your_google_analytics_key"
 ```
+## Creating Content
+
+Sobriquet includes archetypes for the kinds of content that most people may
+want on a portfolio site. At current, these include the following:
+
+* Employment
+* Education
+* Projects
+* Writing
+* Miscellaneous
+
+If there are others you'd like, feel free to submit a PR, happy to add new
+things! I started with items I wanted on my site, but I'm sure there are
+likely others, particularly for people in different careers.
+
+Essentially, add content of each archetype, specifying some of the items in the
+front matter, and Sobriquet will create a page for that item and add a nicely
+stylized card to the front page as well.
+
+For example, to create a new employment item, run the following in your shell
+
+```bash
+$ hugo new employment/socialradar.md
+```
+
+That'll create a new item using the archetype that will look like this:
+
+```toml
++++
+company_img = ""
+company_name = ""
+company_website = ""
+date = "2016-03-06T12:09:47-05:00"
+role = ""
+summary = ""
+time = ""
+title = "socialradar"
+
++++
+```
+
+Fill in the front matter items and a nice looking card will be rendered by
+Sobriquet on the homepage!
+
+For example, this item ends up looking like this for me:
+
+```toml
++++
+company_img = "SocialRadar.png" # Note, this is relative to the /static/img directory
+company_name = "SocialRadar"
+company_website = "http://socialradar.com"
+date = "2016-03-06T12:09:47-05:00"
+role = "VP of Engineering"
+summary = "Leading the engineering team at a startup focused on location technology."
+time = "Sept 2013 - Present"
+title = "socialradar"
+
++++
+```
+
+Any content will be put in a new page at /employment/socialradar so you can
+fill in further details
+
+## To Do
+
+1. Currently there is no way to re-order the items on the front page. Trying to
+figure out a non-confusing way to accomplish this in the config.

@@ -1,0 +1,17 @@
+<div class="vital-card employment">
+    <div class="vital-card-top">
+        <a href="{{ .Params.company_website }}" target="_blank">
+            {{ if isset .Params "company_img" }}
+            <img src="img/{{ .Params.company_img }}" class="pure-img" alt="{{ .Params.company_name }}" />
+            {{ else }}
+            <h2>{{ .Params.company_name }}</h2>
+            {{ end }}
+        </a>
+    </div>
+    <div class="vital-card-body">
+        <h4 class="role">{{ .Params.role }}</h4>
+        <h4 class="time">{{ .Params.time }}</h4>
+        <p>{{ .Params.summary }}</p>
+        <p><a href="{{ .Permalink }}">more...</a></p>
+    </div>
+</div>
