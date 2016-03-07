@@ -14,6 +14,14 @@
         {{ end }}
         <nav class="nav">
             <ul class="nav-list">
+                {{ with .Site.Params.resume }}
+                <li class="nav-item">
+                    <a class="pure-button social-button" href="{{ . }}" target="_blank">
+                        <img src="img/PDF.png" class="pure-img-responsive social-icon" />
+                        <span class="social-text">Résumé</span>
+                    </a>
+                </li>
+                {{ end }}
                 {{ with .Site.Params.facebook }}
                 <li class="nav-item">
                     <a class="pure-button social-button" href="https://facebook.com/{{ . }}" target="_blank">

@@ -77,6 +77,12 @@ h3 {
     margin: 1em;
 }
 
+.resume a {
+    text-decoration: 'underline';
+    color: #fff;
+    font-weight: 100;
+}
+
 .vital-card h3 {
     text-align: center;
     margin: 0.5em 1em;
