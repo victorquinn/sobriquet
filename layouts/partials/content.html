@@ -27,6 +27,13 @@
             {{ range where .Data.Pages "Section" "writing" }}
             {{ .Render "card" }}
             {{ end }}
+            <div class="vital-card-header">
+                <h3>Honors</h3>
+            </div>
+            {{ end }}
+            {{ range where .Data.Pages "Section" "honors" }}
+            {{ .Render "card" }}
+            {{ end }}
         </div>
         <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
             {{ if (len (where .Data.Pages "Section" "project")) gt 0 }}
