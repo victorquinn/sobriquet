@@ -1,0 +1,14 @@
+<div class="vital-card press">
+    <div class="vital-card-top">
+        <a href="{{ .Params.press_link }}" target="_blank">
+            <h2>{{ .Params.press_name }}</h2>
+            {{ if isset .Params "press_img" }}
+            <img src="img/{{ .Params.press_img }}" class="pure-img" alt="{{ .Params.press_name }}" />
+            {{ end }}
+        </a>
+    </div>
+    <div class="vital-card-body">
+        <p>{{ .Params.summary }}</p>
+        <!-- <p><a href="{{ .Permalink }}">more...</a></p>  -->
+    </div>
+</div>

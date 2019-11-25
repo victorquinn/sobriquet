@@ -45,6 +45,14 @@
             {{ range where .Data.Pages "Section" "project" }}
             {{ .Render "card" }}
             {{ end }}
+            {{ if (len (where .Data.Pages "Section" "press")) gt 0 }}
+            <div class="vital-card-header">
+                <h3>Press</h3>
+            </div>
+            {{ end }}
+            {{ range where .Data.Pages "Section" "press" }}
+            {{ .Render "card" }}
+            {{ end }}
         </div>
     </div>
 </div>
